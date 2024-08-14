@@ -8,22 +8,26 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Data Query Engine</h1>
+    <header>
+        <div class="header-container">
+            <div class="logo">ResearchGroup</div>
             <nav>
                 <ul>
-                    <li><a href="index.html" class="nav-button">Home</a></li>
-                    <li><a href="grant.html" class="nav-button">Grant Information</a></li>
-                    <li><a href="research.html" class="nav-button">Research Group & Publications</a></li>
-                    <li><a href="data.html" class="nav-button">Data Query Engine</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="grant.html">Grant Information</a></li>
+                    <li><a href="research.html">Research Group</a></li>
+                    <li><a href="data.html">Data Query Engine</a></li>
                 </ul>
             </nav>
-            
-        </header>
-        <main>
+            <div class="cta-button">
+                <a href="contact.html">Contact Us</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
             <section id="query-engine">
-                <h2>Query the Database</h2>
+                <h1>Query the Database</h1>
                 <form id="queryForm">
                     <label for="query">Enter your query:</label>
                     <input type="text" id="query" name="query">
@@ -31,11 +35,11 @@
                 </form>
                 <canvas id="queryChart"></canvas>
             </section>
-        </main>
-        <footer>
-            <p>&copy; 2024 Drukker Group. All rights reserved.</p>
-        </footer>
-    </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Drukker Group. All rights reserved.</p>
+    </footer>
 
     <script>
         document.getElementById('queryForm').addEventListener('submit', function(event) {

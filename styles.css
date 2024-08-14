@@ -1,35 +1,30 @@
+/* General styling */
 body {
-    font-family: Verdana;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #001158;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    color: #333;
 }
 
-.container {
-    background-color: #fff;
-    padding: 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-
-header, footer {
-    background-color: #001158;
+header {
+    background: #001158;
     color: #fff;
     padding: 10px 0;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 nav ul {
@@ -37,43 +32,145 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 nav ul li {
     margin: 0;
 }
 
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* White with slight transparency */
-    border-radius: 5px;
-    color: #010e42;
+nav ul li a {
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.nav-button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Fully opaque white on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+.cta-button a {
+    background-color: #fff;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.nav-button:active {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transform: translateY(2px);
+.cta-button a:hover {
+    background-color: #fff;
 }
 
-
-main {
-    flex: 1;
+/* Main container and section banners */
+.main-container {
+    max-width: 1200px;
+    margin: 50px auto;
     padding: 20px;
-    overflow-y: auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
+.section-banner {
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.section-banner h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Team members section */
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.team-member {
+    background-color: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 200px; /* Smaller size to fit 3 in a row */
+}
+
+.team-member img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.team-member h2 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.team-member h3 {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.team-member p {
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Publications section */
+#publications ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#publications ul li {
+    margin-bottom: 10px;
+}
+
+#publications ul li a {
+    text-decoration: none;
+    color: #0033cc;
+    font-weight: bold;
+}
+
+#publications ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styling */
 footer {
-    margin-top: 0px;
+    background: #001158;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Buttons */
+.main-button {
+    background-color: #001158;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #001158;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
