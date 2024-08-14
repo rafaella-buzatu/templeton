@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Query Engine</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Data Query Engine</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="nav-button">Home</a></li>
+                    <li><a href="grant.html" class="nav-button">Grant Information</a></li>
+                    <li><a href="research.html" class="nav-button">Research Group & Publications</a></li>
+                    <li><a href="data.html" class="nav-button">Data Query Engine</a></li>
+                </ul>
+            </nav>
+            
+        </header>
+        <main>
+            <section id="query-engine">
+                <h2>Query the Database</h2>
+                <form id="queryForm">
+                    <label for="query">Enter your query:</label>
+                    <input type="text" id="query" name="query">
+                    <button type="submit">Run Query</button>
+                </form>
+                <canvas id="queryChart"></canvas>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2024 Research Group. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('queryForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const query = document.getElementById('query').value;
+            fetch(`/query?query=${encodeURIComponent(query)}`)
+                .then(response => response.json())
+                .then(data => {
+                    const ctx = document.getElementById('queryChart').getContext('2d');
+                    new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: data.labels,
+                            datasets: [{
+                                label: 'Query Results',
+                                data: data.results,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
