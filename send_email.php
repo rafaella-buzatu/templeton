@@ -1,29 +1,53 @@
+// This script sends an email using the POST data received from the contact form.
 <?php
+$errors = [];
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Collect form data
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $subject = $_POST['subject'];
-    $message = $_POST['message'];
+    // Get POST data
+    $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $subject = isset($_POST['subject']) ? trim($_POST['subject']) : '';
+    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
 
-    // Email details
-    $to = "d.m.j.vlemmings@lacdr.leidenuniv.nl";  // Replace with your email address
-    $emailSubject = "New Contact Form Submission Templeton Webpage: " . $subject;
-    $headers = "From: " . $email . "\r\n";
-    $headers .= "Reply-To: " . $email . "\r\n";
-    $fullMessage = "Name: $name\n";
-    $fullMessage .= "Email: $email\n";
-    $fullMessage .= "Message:\n$message";
+    // Validate form fields
+    if (empty($name)) {
+        $errors[] = 'Name is empty';
+    }
 
-    // Send email
-    mail($to, $emailSubject, $fullMessage, $headers);
+    if (empty($email)) {
+        $errors[] = 'Email is empty';
+    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Email is invalid';
+    }
 
-    // Redirect to a thank you page (optional)
-    header('Location: thank_you.html');
-    exit();
+    if (empty($message)) {
+        $errors[] = 'Message is empty';
+    }
+
+    // If no errors, send email
+    if (empty($errors)) {
+        // Recipient email address (replace with your own)
+        $recipient = "r.buzatu@lacdr.leidenuniv.nl";
+
+        // Additional headers
+        $headers = "From: $name <$email>";
+
+        // Send email
+        if (mail($recipient, $message, $headers)) {
+            echo "Email sent successfully!";
+        } else {
+            echo "Failed to send email. Please try again later.";
+        }
+    } else {
+        // Display errors
+        echo "The form contains the following errors:<br>";
+        foreach ($errors as $error) {
+            echo "- $error<br>";
+        }
+    }
 } else {
-    // Redirect back to the form if accessed directly
-    header('Location: contact.html');
-    exit();
+    // Not a POST request, display a 403 forbidden error
+    header("HTTP/1.1 403 Forbidden");
+    echo "You are not allowed to access this page.";
 }
 ?>

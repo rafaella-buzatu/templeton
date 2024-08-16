@@ -262,3 +262,30 @@ footer {
         font-size: 0.9em;
     }
 }
+
+.success-message {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid green;
+    color: green;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.success-message.show {
+    display: block;
+}
+
+.success-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
