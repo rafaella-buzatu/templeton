@@ -289,3 +289,47 @@ footer {
     border-radius: 50%;
     margin-right: 10px;
 }
+
+.main-container-project {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.project {
+    width: 900px;
+    display: inline-flex;
+    align-items:center;
+    text-align: left;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.project img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+.project-details h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.project-details p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+}
+
