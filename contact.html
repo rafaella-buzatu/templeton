@@ -15,7 +15,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="grant.html">Grant Information</a></li>
                     <li><a href="research.html">Research Group</a></li>
-                    <li><a href="data.html">Data Query Engine</a></li>
                 </ul>
             </nav>
             <div class="cta-button">
@@ -25,7 +24,10 @@
     </header>
     <div class="contact-form-container">
         <h1>Contact Us</h1>
-        <form id="contactForm" action="send_email.php" method="POST">
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Replace with your Access Key -->
+             <input type="hidden" name="access_key" value="26fdbedf-7ed5-486f-a36f-305c92d3e163">
+
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
 
@@ -41,31 +43,6 @@
             <button type="submit">Send Message</button>
         </form>
     </div>
-
-
-    <script>
-        document.getElementById('contactForm').onsubmit = function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            var xhr = new XMLHttpRequest();
-            xhr.open('POST', 'send_email.php', true);
-            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    alert('Submitted successfully'); // Show a success popup
-                    document.getElementById('successMessage').classList.add('show');
-                    document.getElementById('contactForm').reset(); // Clear the form
-                } else {
-                    alert('There was a problem with the submission. Please try again.');
-                }
-            };
-
-            // Collect form data
-            var formData = new FormData(document.getElementById('contactForm'));
-            xhr.send(new URLSearchParams(formData).toString());
-        };
-    </script>
-</body>
-
-</html>
+    <footer>
+        <p>&copy; 2024 Drukker Group. All rights reserved.</p>
+    </footer>
