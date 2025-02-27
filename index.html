@@ -9,13 +9,25 @@
 <body>
     <header>
         <div class="header-container">
-            <div class="logo">Drukker Research Group</div>
+            <div class="logo-container">
+                <img src="images/leidenlogo.svg" alt="Leiden University Logo">
+                <div class="logo">Drukker Research Group</div>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="grant.html">Grant Information</a></li>
-                    <li><a href="research.html">Research Group</a></li>
-
+                    <li><a href="">Research Group</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Projects 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="grant.html">John Templeton Foundation</a>
+                            <a href="#">AiPSC</a>
+                            <a href="#">Axial Stem Cells</a>
+                            <a href="#">Painless</a>
+                        </div>
+                    </li>
                 </ul>
             </nav>
             <div class="cta-button">
@@ -25,16 +37,31 @@
     </header>
     <main>
         <div class="main-container">
-            <section id="introduction">
-                <h1>Welcome to Our Research Group</h1>
-                <p>We are focused on life- and healthspan research in mammalian species. Our grant enables us to explore [key areas of research] and contribute to the scientific community.</p>
-            </section>
-            <div class="button-container">
-                <a href="grant.html" class="main-button">Learn About the Grant</a>
-                <a href="research.html" class="main-button">Meet Our Team</a>
-
+            <h1>Welcome to Our Research Group</h1>
+        
+            <div class="content-container"> <!-- Flex container for text and image -->
+                <div class="text-container">
+                    <p>The Drukker lab, led by Prof. Dr. Micha Drukker, is dedicated to advancing stem cell biology, regenerative medicine, and disease modeling. We explore the fundamental mechanisms that govern embryonic tissue formation, leveraging induced pluripotent stem cells (iPSCs) to create innovative models for human disease and drug development, with a focus on neurodegeneration.</p>
+        
+                    <p>Our research integrates transcriptional and epigenetic regulation, lncRNAs, membraneless organelles, and self-renewal mechanisms, using state-of-the-art techniques such as organoid technology, single-cell RNA sequencing, flow cytometry, and CRISPR-Cas9 genetic engineering.</p>
+        
+                    <p>We partner with scientists across disciplines within Leiden University and the Leiden University Medical Center (LUMC) to develop stem cell-based organoid models for drug discovery, toxicity testing, and alternatives to animal models. Additionally, we contribute to stem cell immunology and GMP manufacturing of iPSCs for clinical applications. Our lab also supports evolutionary developmental biology and de-extinction efforts by banking stem cells from exotic and endangered species.</p>
+        
+                    <p>Through a combination of basic and applied research, we aim to shape the future of living cell therapeutics—a new class of treatments that harness stem cells and immune cells to revolutionize medicine.</p>
+                </div>
+        
+                <div class="image-container">
+                    <img src="images/drukkerlab.png" alt="Drukker Lab" class="main-image">
+                </div>
             </div>
         </div>
+            <div class="button-container">
+                <a href="grant.html" class="main-button">John Templeton Grant</a>
+                <a href="" class="main-button">Meet Our Team</a>
+            </div>
+        
+        
+        
     </main>
         <footer>
             <p>&copy; 2025 Drukker Group. All rights reserved.</p>
