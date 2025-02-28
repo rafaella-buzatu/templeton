@@ -73,24 +73,25 @@
         <p>&copy; 2025 Drukker Group. All rights reserved.</p>
     </footer>
 </body>
+    <script>
+        function toggleMobileMenu() {
+            var menu = document.querySelector('.mobile-nav');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+        
+        // Function to toggle the "Projects" dropdown inside the mobile menu
+        function toggleProjectsMenu() {
+            var dropdown = document.getElementById('projectsDropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+    </script>
+
 </html>
-<script>
-    function toggleMobileMenu() {
-        var menu = document.querySelector('.mobile-nav');
-        if (menu.style.display === 'block') {
-            menu.style.display = 'none';
-        } else {
-            menu.style.display = 'block';
-        }
-    }
-    
-    // Function to toggle the "Projects" dropdown inside the mobile menu
-    function toggleProjectsMenu() {
-        var dropdown = document.getElementById('projectsDropdown');
-        if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
-        } else {
-            dropdown.style.display = 'block';
-        }
-    }
-</script>
