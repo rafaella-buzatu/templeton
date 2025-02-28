@@ -355,7 +355,7 @@ footer {
 }
 
 .project {
-    width: 1100px;
+    width: 95%;
     display: inline-flex;
     align-items:center;
     text-align: left;
@@ -392,7 +392,7 @@ footer {
 
 
 .update {
-    width: 1100px;
+    width: 95%;
     display: inline-flex;
     align-items:center;
     text-align: left;
@@ -572,6 +572,13 @@ ul {
 
 
 @media only screen and (max-width: 992px) {
+    .mobile-nav, .cta-button {
+        display: block;
+    }    
+    
+    .mobile-menu-icon {
+        display: block;
+    }
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -590,11 +597,16 @@ ul {
     }
     
     .main-container h1 {
-        font-size: 1.5em; /* Adjust the size (default is ~2em) */
+        font-size: 1.2em; /* Adjust the size (default is ~2em) */
         text-align: center;
         margin-bottom: 10px; /* Reduce spacing */
     }
 
+    .pub-container h1 {
+        font-size: 1.2em; /* Adjust the size (default is ~2em) */
+        text-align: center;
+        margin-bottom: 10px; /* Reduce spacing */
+    }
     nav ul {
         list-style: none;
         padding: 0;
@@ -617,7 +629,6 @@ ul {
     .cta-button a {
         background-color: #fff;
         color: #000000;
-        padding: 0px 0px;
         border-radius: 5px;
         text-decoration: none;
         font-weight: bold;
@@ -630,18 +641,7 @@ ul {
         font-size: 0.8em;
     }
     
-    .main-container {
-        width: 100%;
-        margin: 10px auto;
-        padding-top: 10px;
-        padding-bottom:10px;
-        background-color: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        box-shadow: none; /* Remove shadow for a cleaner mobile look */
-        text-align: center;
-    }
-
+   
     /* Stack image above text */
     .content-container {
         display: flex;
@@ -667,9 +667,8 @@ ul {
     }
 
     .text-container {
-        width: 150%;
-        text-align: justify;
-        padding: 0 10px; /* Add padding for readability */
+        width: 100%;
+        text-align: justify; /* Add padding for readability */
         font-size: 14px; /* Slightly larger for better readability */
     }
 
@@ -761,10 +760,17 @@ ul {
     
 
     /* Default (Desktop) Layout */
+
+
 .pub-container {
     width: 100%;
-    margin: 50px auto;
+    margin: 0px;
+    padding-top: 10px;
+    padding-bottom:10px;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    box-shadow: none; /* Remove shadow for a cleaner mobile look */
     text-align: center;
 }
 
@@ -1010,7 +1016,7 @@ ul {
     }
 
     .update {
-        width: 100%;
+        width: 95%;
         display: inline-flex;
         align-items:center;
         text-align: left;
@@ -1161,6 +1167,7 @@ ul {
     
     /* Flexbox container for text and image */
     .content-container {
+        width: 100%;
         display: flex;
         align-items: center; /* Align text and image vertically */
         justify-content: space-between; /* Spread them apart */ /* Adds spacing between text and image */
@@ -1170,7 +1177,7 @@ ul {
     .text-container {
         flex: 1; /* Allows text to take available space */
         text-align: justify; /* Justifies text */
-        max-width: 50%; /* Prevents text from being too wide */
+        max-width: 100%; /* Prevents text from being too wide */
     }
     
     /* Ensure image stays on the right */
