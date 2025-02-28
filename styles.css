@@ -266,11 +266,12 @@ footer {
     background-color: #0033cc;
 }
 
-/* Default (Desktop) Layout */
 .pub-container {
-    width: 100%;
+    max-width: 1200px;
     margin: 50px auto;
+    padding: 20px;
     background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
