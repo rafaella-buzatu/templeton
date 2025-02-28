@@ -1,7 +1,5 @@
 /* General styling */
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-
 .main-container {
     max-width: 1200px;
     margin: 50px auto;
@@ -567,7 +565,7 @@ ul {
     max-width: 100%; /* Ensure image resizes properly */
     height: auto; /* Keep aspect ratio */
 }
-}
+
 
 
 /* Large devices (laptops/desktops, 992px and up) */
