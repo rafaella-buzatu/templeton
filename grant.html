@@ -13,10 +13,12 @@
                 <img src="images/leidenlogo.svg" alt="Leiden University Logo">
                 <div class="logo">Drukker Research Group</div>
             </div>
-            <nav>
+    
+            <!-- Regular Navigation for Desktop -->
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="">Research Group</a></li>
+                    <li><a href="team.html">Research Group</a></li>
                     <li class="dropdown">
                         <button class="dropbtn">Projects 
                             <i class="fa fa-caret-down"></i>
@@ -30,27 +32,60 @@
                     </li>
                 </ul>
             </nav>
+    
+            <!-- Call-to-Action Button -->
             <div class="cta-button">
                 <a href="contact.html">Contact Us</a>
             </div>
+    
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                ☰
+            </div>
         </div>
+    
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Research Group</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="grant.html">John Templeton Foundation</a>
+                        <a href="team.html">AiPSC</a>
+                        <a href="team.html">Axial Stem Cells</a>
+                        <a href="team.html">Painless</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
         <div class="main-container">
-                <h1>About the Grant</h1>
-                <div style="display: flex; align-items: flex-start;">
-                    <p style="text-align: justify; flex: 1;">
-                        The Templeton Foundation has financed this project under Grant ID 62572 as part of their genetics research support directive.
-                        “The mission of the John Templeton Foundation is to support interdisciplinary research and catalyze conversations that inspire awe and wonder. We are working to create a world where people are curious about the wonders of the universe, free to pursue lives of meaning and purpose, and motivated by great and selfless love.”
-                    </p>
-                    <img src="images/templeton-logo.png" style="max-width: 300px; margin-left: 20px;">
-                </div>
-                
-                <p style="text-align: justify;"> The fact that neurons and other types of cells in the human body are rarely replaced raises the question of the genetic mechanisms that enable cells to function properly for decades and possibly 100 years or more. The popular “free-radical aging” and “rate of living” theories, and the Hayflick phenomenon, fail to adequately explain such extreme cellular longevity. Nevertheless, these ideas affect human behavior e.g. intake of antioxidant supplements and experimental rejuvenation therapy.
-                    Our project will investigate a new direction that connects the efficiency of stress response to cellular and animal lifespan, and analyze a candidate genetic mechanism. We will create models of cells that are rarely replaced, e.g. neurons, and cells with limited lifespan, e.g. fibroblasts, from exceptionally long living, and short living mammals. We will expose cells to repeated stress stimuli while monitoring their viability by high throughput microscopy. Moreover, we will analyze the mammalian long noncoding RNA gene NEAT1 orchestrating the assembly of specialized stress-induced complexes, named paraspeckles. We identified key components of the paraspeckle-RNA-metabolism-protein quality axis (e.g. Mol. Cell 2019, BMC Biology 2020), and our preliminary analysis indicates high homology among long living mammals. Based on putative connections to lifespan, we will analyze the phylogeny of NEAT1, and overexpress paraspeckles to quantify stress protection effect in each species. To validate mechanisms, we will transfer NEAT1 from mammals with highly efficient stress protection to less efficient cells.
-                    </p>
-                 <p style="text-align: justify;"> The project will deliver answers on the ability of cells to withstand prolonged stress in relation to animal lifespan, paraspeckles function, and their evolution. If successful, a new theory and model of cellular lifespan will be established, paving ways to investigate and prevent age-related frailty. The multispecies stem cell approach will open new avenues for evolution and genetics.
-                     </p>
+        <div class="grant-container">
+            <h1>About the Grant</h1>
+            
+            <div class="grant-content">
+                <p class="grant-text">
+                    The Templeton Foundation has financed this project under Grant ID 62572 as part of their genetics research support directive.
+                    “The mission of the John Templeton Foundation is to support interdisciplinary research and catalyze conversations that inspire awe and wonder. We are working to create a world where people are curious about the wonders of the universe, free to pursue lives of meaning and purpose, and motivated by great and selfless love.”
+                </p>
+                <img src="images/templeton-logo.png" class="grant-image" alt="Templeton Foundation Logo">
+            </div>
+        
+            <p class="grant-paragraph">
+                The fact that neurons and other types of cells in the human body are rarely replaced raises the question of the genetic mechanisms that enable cells to function properly for decades and possibly 100 years or more. The popular “free-radical aging” and “rate of living” theories, and the Hayflick phenomenon, fail to adequately explain such extreme cellular longevity. Nevertheless, these ideas affect human behavior e.g. intake of antioxidant supplements and experimental rejuvenation therapy.
+                Our project will investigate a new direction that connects the efficiency of stress response to cellular and animal lifespan, and analyze a candidate genetic mechanism. We will create models of cells that are rarely replaced, e.g. neurons, and cells with limited lifespan, e.g. fibroblasts, from exceptionally long living, and short living mammals. We will expose cells to repeated stress stimuli while monitoring their viability by high throughput microscopy. Moreover, we will analyze the mammalian long noncoding RNA gene NEAT1 orchestrating the assembly of specialized stress-induced complexes, named paraspeckles. We identified key components of the paraspeckle-RNA-metabolism-protein quality axis (e.g. Mol. Cell 2019, BMC Biology 2020), and our preliminary analysis indicates high homology among long living mammals. Based on putative connections to lifespan, we will analyze the phylogeny of NEAT1, and overexpress paraspeckles to quantify stress protection effect in each species. To validate mechanisms, we will transfer NEAT1 from mammals with highly efficient stress protection to less efficient cells.
+            </p>
+        
+            <p class="grant-paragraph">
+                The project will deliver answers on the ability of cells to withstand prolonged stress in relation to animal lifespan, paraspeckles function, and their evolution. If successful, a new theory and model of cellular lifespan will be established, paving ways to investigate and prevent age-related frailty. The multispecies stem cell approach will open new avenues for evolution and genetics.
+            </p>
+        </div>
         </div>
         <div class="main-container-project">
             <h1>Current Projects</h1>
@@ -98,7 +133,8 @@
                 <img src="images/census.png" style="max-width: 300px" alt="Project 3 Image">
                 <div class="project-details">
                     <h2>Project 5: Census of iPSC reprogramming methods for understudied mammalian species </h2>
-                    <p></p>
+                    <p>The ability to generate induced pluripotent stem cells (iPSCs) from diverse species represents an exciting opportunity to study the molecular and cellular basis of interspecies differences across a wide range of phenotypes, from development to lifespan and ageing. iPSCs lines from numerous species have been generated over the past 10 years, but efficient use of these resources is still hampered by the lack of a coherent database that collates critical information about existing lines, such as culture conditions, pluripotency state, and availability. </p>
+                    <p>We have started a community effort to build such a database, where we have collected information about more than 150 stem cell lines so far. We plan to publish this database as a public resource in the near future, accompanied by a review about emerging applications of pluripotent stem cells from understudied species.</p>
                 </div>
             </div>
         </div>
@@ -141,7 +177,8 @@
                     <img src="images/Christian.jpg" alt="Dr. Name 4">
                     <h2>Dr. Christian Schröter</h2>
                     <h3>Assistant Professor</h3>
-                    <p>Role in the Project</p>
+                    <p>Christian Schröter has joined the project team in summer 2024 as an Assistant Professor in the Drukker group. He obtained his PhD from the Max Planck Institute of Molecular Cell Biology and Genetics in Dresden, conducted postdoctoral work at the Department of Genetics at the University of Cambridge, UK, and led an independent research group Max Planck Institute of Molecular Physiology in Dortmund from 2016 till 2024. </p>
+                    <p>He has a keen interest in understanding how the species-specific genetic make-up of a cell determines its dynamic behavior during develoment and ageing. From his previous work, Schröter brings expertise in live-cell imaging, molecular genetics, and single-cell transcriptomics.</p>
                 </div>
                 <div class="team-member">
                     <img src="images/Micha.jpg" alt="Dr. Name 4">
@@ -152,8 +189,8 @@
                 <!-- Add more team members as needed -->
             </div>
         </div>
-
         <div class="main-container">
+        <div class="pub-container">
                 <h1>Publications</h1>
             <ul>
                 <li><a href="https://www.biorxiv.org/content/10.1101/2024.10.22.619594v1">Phylogenetic Study of Long Non-Coding RNA NEAT1 and MALAT1 to Infer Structural-Functional Connection</a></li>
@@ -165,29 +202,38 @@
             <p></p>
             </ul>
         </div>
+        </div>
     </div>
                 <div class="main-container">
                 <h1>Updates</h1>
-                <p> <div class="project">
-                    <img src="images/bioarchive.png" style="max-height: 50px" alt="bioarchive">
-                    <div class="project-details">
-                        <h2>Pre-print by K.Arkhipova: Phylogenetic Study of Long Non-Coding RNA NEAT1 and MALAT1 to Infer Structural-Functional Connection </h2>
+                <p> <div class="update">
+                    <img src="images/paraspeckleconf.jpeg" alt="confAustralia">
+                    <div class="update-details">
+                        <h2>Paraspeckle and Condensates Symposium on 30 October 2024 on Rottnest Island </h2>
+                        <p><i> October 30, 2024. Rottnest Island </i></p>
+                        <p> Dr. Ksenia Arkhipova and Prof. Dr. Micha Drukker attended the Paraspeckle and Condensates Symposium, where Micha gave a talk and Ksenia presented a poster on "Phylogenetic Study of Long Non-Coding RNA NEAT1 and MALAT1 to Infer Structural-Functional Connection".</p>
+                    </div>
+                </div></p>
+                <p> <div class="update">
+                    <img src="images/bioarchive.png" alt="bioarchive">
+                    <div class="update-details">
+                        <h2>Pre-print by K.Arkhipova available on BioRxiv: Phylogenetic Study of Long Non-Coding RNA NEAT1 and MALAT1 to Infer Structural-Functional Connection </h2>
                         <p><i> October 25, 2024 </i></p>
                         <p>doi: https://doi.org/10.1101/2024.10.22.619594
                         </p>
                     </div>
                 </div></p>
-                <p> <div class="project">
-                    <img src="images/bioarchive.png" style="max-height: 50px" alt="bioarchive">
-                    <div class="project-details">
-                        <h2>Pre-print by A. de la Porte: Single-cell multiome uncovers differences in glycogen metabolism underlying species-specific speed of development </h2>
+                <p> <div class="update">
+                    <img src="images/bioarchive.png" alt="bioarchive">
+                    <div class="update-details">
+                        <h2>Pre-print by A. de la Porte available on BioRxiv: Single-cell multiome uncovers differences in glycogen metabolism underlying species-specific speed of development </h2>
                         <p><i> September 6, 2024 </i></p>
                         <p>doi: https://doi.org/10.1101/2024.09.03.610938</p>
                     </div>
                 </div></p>
-                <p> <div class="project">
-                    <img src="images/drukkerlab.png" style="max-height: 100px" alt="ISSCR Image">
-                    <div class="project-details">
+                <p> <div class="update">
+                    <img src="images/drukkerlab.png" alt="ISSCR Image">
+                    <div class="update-details">
                     <h2>Drukker Lab at the ISSCR 2024 in Hamburg</h2>
                         <p><i> 10-13 July, 2024</i></p>
                         <p></p>
@@ -200,3 +246,23 @@
     </footer>
 </body>
 </html>
+<script>
+    function toggleMobileMenu() {
+        var menu = document.querySelector('.mobile-nav');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+    
+    // Function to toggle the "Projects" dropdown inside the mobile menu
+    function toggleProjectsMenu() {
+        var dropdown = document.getElementById('projectsDropdown');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    }
+</script>

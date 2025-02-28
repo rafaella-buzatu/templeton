@@ -13,10 +13,12 @@
                 <img src="images/leidenlogo.svg" alt="Leiden University Logo">
                 <div class="logo">Drukker Research Group</div>
             </div>
-            <nav>
+    
+            <!-- Regular Navigation for Desktop -->
+            <nav class="desktop-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="">Research Group</a></li>
+                    <li><a href="team.html">Research Group</a></li>
                     <li class="dropdown">
                         <button class="dropbtn">Projects 
                             <i class="fa fa-caret-down"></i>
@@ -30,11 +32,39 @@
                     </li>
                 </ul>
             </nav>
+    
+            <!-- Call-to-Action Button -->
             <div class="cta-button">
                 <a href="contact.html">Contact Us</a>
             </div>
+    
+            <!-- Mobile Menu Toggle (Hamburger Icon) -->
+            <div class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                ☰
+            </div>
         </div>
+    
+        <!-- Mobile Navigation (Hidden by Default) -->
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="team.html">Research Group</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Projects 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="grant.html">John Templeton Foundation</a>
+                        <a href="team.html">AiPSC</a>
+                        <a href="team.html">Axial Stem Cells</a>
+                        <a href="team.html">Painless</a>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
+    
     <main>
         <div class="main-container">
             <h1>Welcome to Our Research Group</h1>
@@ -69,3 +99,26 @@
     </div>
 </body>
 </html>
+
+<script>
+    function toggleMobileMenu() {
+        var menu = document.querySelector('.mobile-nav');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+    
+    // Function to toggle the "Projects" dropdown inside the mobile menu
+    function toggleProjectsMenu() {
+        var dropdown = document.getElementById('projectsDropdown');
+        if (dropdown.style.display === 'block') {
+            dropdown.style.display = 'none';
+        } else {
+            dropdown.style.display = 'block';
+        }
+    }
+</script>
+    
+   
