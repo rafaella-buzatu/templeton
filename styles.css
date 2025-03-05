@@ -387,6 +387,7 @@ footer {
 
 .project-details p {
     margin: 0;
+    text-align: justify;
     font-size: 16px;
     color: #555;
 }
@@ -569,7 +570,7 @@ ul {
 
 
 
-/* Large devices (laptops/desktops, 992px and up) */
+/*phone styling*/
 
 
 @media only screen and (max-width: 992px) {
@@ -764,7 +765,6 @@ ul {
 
 
 .pub-container {
-    width: 100%;
     margin: 0px;
     padding-top: 10px;
     padding-bottom:10px;
@@ -785,7 +785,7 @@ ul {
 .pub-container ul li {
     font-size: 12px;
     margin-bottom: 10px;
-    padding-left: 15px; /* Ensures consistent indentation */
+     /* Ensures consistent indentation */
 }
 
 /* Make links look cleaner */
