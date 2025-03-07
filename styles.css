@@ -283,7 +283,7 @@ footer {
 }
 
 .pub-container ul li {
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 10px;
     padding-left: 15px; /* Ensures consistent indentation */
 }
@@ -292,7 +292,6 @@ footer {
 .pub-container ul li a {
     text-decoration: none;
     color: #001158;
-    font-weight: bold;
 }
 
 
@@ -792,7 +791,6 @@ ul {
 .pub-container ul li a {
     text-decoration: none;
     color: #001158;
-    font-weight: bold;
 }
 
     /* Footer styling */
