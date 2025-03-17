@@ -10,6 +10,16 @@
 }
 
 
+.socials-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.socials-button-container img{
+    max-height:70%;
+    object-fit: contain;
+}
+
 .mobile-nav, .cta-button {
     display: none;
 }    
@@ -106,6 +116,7 @@ nav ul li a {
 
 /* Team members section */
 .team-members {
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -699,6 +710,7 @@ ul {
     }
     /* Team members section */
     .team-members {
+        max-width:100%;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -707,6 +719,7 @@ ul {
     }
     
     .team-member {
+        max-width:100%;
         background-color: #f4f4f4;
         padding: 15px;
         border-radius: 10px;
