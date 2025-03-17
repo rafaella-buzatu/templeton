@@ -986,6 +986,16 @@ ul {
         text-align: center;
     }
 
+    .socials-button-container {
+        display: inline;
+        justify-content: center;
+        margin-top: 10px;
+    }
+    .socials-button-container img{
+        max-height:50%;
+        object-fit: contain;
+    }
+
     /* Stack image above text on mobile */
     .project {
         display: flex;
