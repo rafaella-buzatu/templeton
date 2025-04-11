@@ -91,6 +91,15 @@ nav ul li a {
     flex: 1;
     text-align: justify;
 }
+.grant-text.ul {
+    /* Remove browser's default padding/margin */
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+  
+    /* Place bullets inside the text box (instead of outside) */
+    list-style-position: inside;
+  }
 
 .grant-paragraph {
     text-align: justify;
@@ -100,6 +109,13 @@ nav ul li a {
 .grant-image {
     max-width: 300px;
     height: auto;
+}
+
+/* Image to the right */
+.grant-image-wide {
+    max-height: 150px;
+    width: auto;
+    align-items: center;
 }
 
 .section-banner {
@@ -443,7 +459,7 @@ ul {
     /* Remove browser's default padding/margin */
     margin: 0;
     padding: 0;
-    font-size: 18px;
+    font-size: 16px;
   
     /* Place bullets inside the text box (instead of outside) */
     list-style-position: inside;
@@ -838,12 +854,20 @@ ul {
         margin-bottom: 15px; /* Add spacing below the image */
     }
 
+    /* Image to the right */
+    .grant-image-wide {
+        max-width: 90%;
+        height: auto;
+        align-items: center;
+    }
+
     .grant-text, .grant-paragraph {
         text-align: justify;
         padding: 0 10px;
         font-size: 14px;
      
     }
+
 
     /* Push footer to the bottom */
     .main-container {
@@ -1073,7 +1097,7 @@ ul {
         color: #555;
     }
     
-
+    
     
     ul {
         /* Remove browser's default padding/margin */
