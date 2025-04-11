@@ -857,6 +857,7 @@ ul {
     /* Image to the right */
     .grant-image-wide {
         max-width: 90%;
+        max-width : 300px;
         height: auto;
         align-items: center;
     }
